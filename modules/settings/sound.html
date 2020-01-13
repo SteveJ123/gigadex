@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="sound.css" media="screen" >
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+   
+</head>
+
+<body id="gradient">
+    
+    <h4>sound</h4>
+
+    <p>Choose your output device</p>
+    <select>
+        <option value="volvo">Speaker(High Definition Audio Device)</option>
+       
+      </select>
+
+      <p style="margin:0px; padding:0px; margin-top:10px;">Volume</p>
+      <div>        
+        <div class="slidecontainer" style="display:inline-block;">
+            <i class="fas fa-volume-up" style="display:inline-block;"></i>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <p style="display:inline-block; padding:10px;"><span id="demo"></span></p>  
+        </div>
+          <div>
+            
+         
+      </div>
+
+      <script>
+      var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+output.style.color="black";
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+      </script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="settings.js"></script>     
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+</body>
+</html>
